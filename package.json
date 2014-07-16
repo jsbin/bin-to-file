@@ -1,0 +1,28 @@
+{
+  "name": "bin-to-file",
+  "version": "0.0.1",
+  "description": "Converts JS Bin object to static HTML",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node_modules/mocha/bin/_mocha --ui bdd test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jsbin/bin-to-file.git"
+  },
+  "keywords": [
+    "jsbin"
+  ],
+  "author": "Remy Sharp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsbin/bin-to-file/issues"
+  },
+  "homepage": "https://github.com/jsbin/bin-to-file",
+  "devDependencies": {
+    "mocha": "~1.20.1"
+  }
+}
