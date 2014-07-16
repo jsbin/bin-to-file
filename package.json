@@ -1,6 +1,6 @@
 {
   "name": "bin-to-file",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Converts JS Bin object to static HTML",
   "main": "lib/index.js",
   "directories": {
