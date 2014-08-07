@@ -16,8 +16,10 @@ describe('simple html', function () {
     assert(html.length > 0, 'fixture HTML has content');
   });
 
-  it('do nothing to plain html', function () {
+  it('does nothing to plain html', function () {
     var file = toFile({ html: html });
+
+    file = file.replace(/<!--hash:.*?-->\n/, '');
 
     assert(html === file, 'content matches');
   });

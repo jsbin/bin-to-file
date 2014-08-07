@@ -15,6 +15,8 @@ describe('empty bin', function () {
   it('should insert JS at end when missing </body>', function () {
     var file = toFile({ html: html, javascript: '', css: '' });
 
+    file = file.replace(/<!--hash:.*?-->\n/, '');
+
     assert(file === html, 'output is exactly the same');
   });
 });

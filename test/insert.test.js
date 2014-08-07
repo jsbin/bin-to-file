@@ -43,6 +43,7 @@ describe('content insert', function () {
 
     var lines = file.split('\n');
     var pos = lines.indexOf(css);
+
     assert(lines[pos + 2].indexOf('</title>') === 0, lines[pos + 2]);
   });
 
