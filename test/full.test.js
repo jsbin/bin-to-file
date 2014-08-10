@@ -31,4 +31,4 @@ describe('full bin insert', function () {
     assert($.html() === modifiedHTML, 'pulling HTML back out is correct');
 
   });
-})
+});

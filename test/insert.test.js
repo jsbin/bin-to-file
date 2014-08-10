@@ -55,7 +55,6 @@ describe('content insert', function () {
     assert(file.indexOf(javascript) !== -1, 'contains the javascript: ' + file);
 
     var lines = file.split('\n');
-    var pos = lines.indexOf(javascript);
 
     assert(lines.slice(-1)[0] === '</script>', '???: ' + lines.slice(-2));
   });

@@ -1,6 +1,5 @@
 'use strict';
 /*global describe, it, beforeEach, after */
-var assert = require('assert');
 var w3cjs = require('w3cjs');
 var toFile = require('../');
 var fs = require('fs');
@@ -31,7 +30,7 @@ describe('integrity', function () {
       callback: function (res) {
         if (res.messages && res.messages.length > 0 ) {
           throw {error: 'html errors have been found', results: res};
-        };
+        }
         done();
       }
     });
