@@ -4,4 +4,4 @@ notifications:
 before_script:
 - npm install
 node_js:
-- "0.10"
+- 8
