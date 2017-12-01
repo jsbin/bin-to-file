@@ -1,6 +1,6 @@
 {
   "name": "bin-to-file",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Converts JS Bin object to static HTML",
   "main": "lib/index.js",
   "directories": {
@@ -14,9 +14,7 @@
     "type": "git",
     "url": "git://github.com/jsbin/bin-to-file.git"
   },
-  "keywords": [
-    "jsbin"
-  ],
+  "keywords": ["jsbin"],
   "author": "Remy Sharp",
   "bugs": {
     "url": "https://github.com/jsbin/bin-to-file/issues"
