@@ -1,20 +1,33 @@
 {
   "name": "bin-to-file",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Converts JS Bin object to static HTML",
   "main": "lib/index.js",
+  "babel": {
+    "presets": [
+      "env",
+      "stage-0"
+    ],
+    "plugins": []
+  },
   "directories": {
     "lib": "lib",
     "test": "test"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "jest **/*.test.js"
+    "test": "jest **/*.test.js",
+    "prepublishOnly": "babel --ignore=node_modules lib/index.js -o dist/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/jsbin/bin-to-file.git"
   },
-  "keywords": ["jsbin"],
+  "keywords": [
+    "jsbin"
+  ],
   "author": "Remy Sharp",
   "bugs": {
     "url": "https://github.com/jsbin/bin-to-file/issues"
@@ -22,7 +35,10 @@
   "homepage": "https://github.com/jsbin/bin-to-file",
   "devDependencies": {
     "@remy/eslint": "^1.3.0",
+    "babel-cli": "^6.26.0",
     "babel-eslint": "^7.2.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
     "cheerio": "^0.19.0",
     "eslint": "^4.16.0",
     "eslint-config-react-app": "^2.1.0",
