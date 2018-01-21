@@ -1,7 +1,7 @@
 'use strict';
 /*global describe, it, beforeEach */
 var assert = require('assert');
-var toFile = require('../');
+var toFile = require('../lib');
 var fs = require('fs');
 var path = require('path');
 
@@ -45,12 +45,8 @@ describe('content insert', function() {
     var css = 'body { background: red; }';
     var file = toFile({ html: html, css: css });
 
-    assert(file.indexOf(css) !== -1, 'contains the css: ' + file);
-
-    var lines = file.split('\n');
-    var pos = lines.indexOf(css);
-
-    assert(lines[pos + 2].indexOf('</title>') === 0, lines[pos + 2]);
+    expect(file).toEqual(expect.stringContaining(css));
+    expect(file).toEqual(expect.stringContaining('</title>'));
   });
 
   it('should insert JS at end when missing </body>', function() {

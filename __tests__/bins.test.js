@@ -4,7 +4,7 @@ const { promisify } = require('util');
 const readFile = promisify(fs.readFile);
 const base = __dirname + '/fixtures/bins';
 const fixtures = readdir(base);
-const binToFile = require('../');
+const binToFile = require('../lib');
 
 describe('bin fixtures', () => {
   fixtures

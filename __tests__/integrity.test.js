@@ -1,7 +1,7 @@
 'use strict';
 /*global describe, it, beforeEach, after */
 var w3cjs = require('w3cjs');
-var toFile = require('../');
+var toFile = require('../lib');
 var fs = require('fs');
 var path = require('path');
 

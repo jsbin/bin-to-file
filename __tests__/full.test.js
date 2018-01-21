@@ -1,7 +1,7 @@
 'use strict';
 /*global describe, it, beforeEach */
 var assert = require('assert');
-var toFile = require('../');
+var toFile = require('../lib');
 var fs = require('fs');
 var path = require('path');
 var cheerio = require('cheerio');

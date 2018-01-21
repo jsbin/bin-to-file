@@ -1,23 +1,23 @@
 'use strict';
 /*global describe, it, beforeEach */
 var assert = require('assert');
-var toFile = require('../');
+var toFile = require('../lib');
 var fs = require('fs');
 var path = require('path');
 var cheerio = require('cheerio');
 
-describe('js only', function () {
+describe('js only', function() {
   var js = '';
 
-  beforeEach(function () {
+  beforeEach(function() {
     js = fs.readFileSync(path.join(__dirname, 'fixtures', 'simple.js'), 'utf8');
   });
 
-  it('should have fixtures', function () {
+  it('should have fixtures', function() {
     assert(js.length > 0, 'fixture js has content');
   });
 
-  it('does nothing to plain js', function () {
+  it('does nothing to plain js', function() {
     var file = toFile({ javascript: js, url: 'foo', revision: 10 });
 
     var $ = cheerio.load(file);
@@ -27,18 +27,21 @@ describe('js only', function () {
   });
 });
 
-describe('css only', function () {
+describe('css only', function() {
   var css = '';
 
-  beforeEach(function () {
-    css = fs.readFileSync(path.join(__dirname, 'fixtures', 'simple.css'), 'utf8');
+  beforeEach(function() {
+    css = fs.readFileSync(
+      path.join(__dirname, 'fixtures', 'simple.css'),
+      'utf8'
+    );
   });
 
-  it('should have fixtures', function () {
+  it('should have fixtures', function() {
     assert(css.length > 0, 'fixture css has content');
   });
 
-  it('does nothing to plain css', function () {
+  it('does nothing to plain css', function() {
     var file = toFile({ css: css });
 
     var $ = cheerio.load(file);
