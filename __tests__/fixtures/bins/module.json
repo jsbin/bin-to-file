@@ -1,0 +1,12 @@
+{
+  "id": 41972605,
+  "url": "white-art-631",
+  "revision": 1,
+  "active": "y",
+  "javascript":
+    "import {\n  render,\n  html\n} from 'https://unpkg.com/lit-html@0.9.0/lit-html.js';\n\n// A lit-html template uses the `html` template tag:\nlet sayHello = (name) => html `<h1>Hello ${name}</h1>`;\n\n// It's rendered with the `render()` function:\nrender(sayHello('World'), document.body);\n\nsetTimeout(() => {\n  // And re-renders only update the data that changed, without\n  // VDOM diffing!\n  render(sayHello('Everyone'), document.body);\n}, 500);",
+  "html":
+    "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width\">\n  <title>lit demo</title>\n</head>\n<body>\n<!-- with lit -->\n</body>\n</html>",
+  "css": "* {\n  font-family: sans-serif;\n}",
+  "settings": "{}"
+}
