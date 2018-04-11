@@ -1,33 +1,27 @@
 {
   "name": "bin-to-file",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Converts JS Bin object to static HTML",
   "main": "dist/index.js",
   "babel": {
-    "presets": [
-      "env",
-      "stage-0"
-    ],
+    "presets": ["env", "stage-0"],
     "plugins": []
   },
   "directories": {
     "lib": "lib",
     "test": "test"
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "test": "jest **/*.test.js",
-    "prepublishOnly": "babel --ignore=node_modules lib/index.js -o dist/index.js"
+    "prepublishOnly":
+      "babel --ignore=node_modules lib/index.js -o dist/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/jsbin/bin-to-file.git"
   },
-  "keywords": [
-    "jsbin"
-  ],
+  "keywords": ["jsbin"],
   "author": "Remy Sharp",
   "bugs": {
     "url": "https://github.com/jsbin/bin-to-file/issues"
