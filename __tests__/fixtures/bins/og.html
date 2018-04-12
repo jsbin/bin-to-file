@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- source: https://jsbin.com/aseno/1/edit -->
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<title>Sandbox</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<style type="text/css" media="screen">
+body { background-color: #000; font: 16px Helvetica, Arial; color: #fff; height: 100%; }
+.panel
+{
+position: absolute;
+width: 300px;
+border:solid 3px blue;
+}
+.panelTitle
+{
+background-color: #666;
+color: Yellow;
+}
+.panelContent
+{
+background-color: #eee;
+color: blue;
+display:none;
+}
+
+</style>
+</head>
+<body>
+<div style="height: 500px">
+  <div id="p1" class="panel">
+    <div class="panelTitle">title title title title</div>
+    <div class="panelContent">more<br />text<br />more<br />text<br />...........................</div>
+  </div>
+</div>  
+  <div id="dbg"></div>
+<script type="text/javascript">
+<!-- we run in the footer so no need to use onload -->
+/**
+ * note: I've removed the .stop() because if the mouse hovers back
+ * over the div before the effect has completed, it changes the 
+ * original 'height' of the div, and the next time it slides down
+ * it won't slide down to the correct height.
+ */
+ 
+  $('#p1').hover(function(e) {
+    // we're searching the children of 'this' rather than the event's target
+    // which can be different each time
+    $(this).children('.panelContent').slideDown('slow');
+  }, function(e) {
+    $(this).children('.panelContent').slideUp('slow');
+  });
+</script>
+</body>
+</html>

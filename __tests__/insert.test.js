@@ -3,7 +3,25 @@
 var assert = require('assert');
 var toFile = require('../lib');
 var fs = require('fs');
+const { promisify } = require('util');
+const read = promisify(fs.readFile);
 var path = require('path');
+
+function metadata({
+  url,
+  revision,
+  user = 'anonymous',
+  year = new Date().getFullYear(),
+}) {
+  return `<!--
+
+‣ Created using JS Bin - https://jsbin.com
+‣ Copyright (c) ${year} by @${user} - https://jsbin.com/${url}/${revision}/edit
+‣ Released under the MIT license - https://jsbin.mit-license.org
+
+-->
+<meta name="robots" content="noindex">`;
+}
 
 describe('content insert', function() {
   var html = '';

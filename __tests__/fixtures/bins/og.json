@@ -1,0 +1,13 @@
+{
+  "id": 622,
+  "url": "aseno",
+  "revision": 1,
+  "active": "y",
+  "javascript":
+    "/**\r\n * note: I've removed the .stop() because if the mouse hovers back\r\n * over the div before the effect has completed, it changes the \r\n * original 'height' of the div, and the next time it slides down\r\n * it won't slide down to the correct height.\r\n */\r\n \r\n  $('#p1').hover(function(e) {\r\n    // we're searching the children of 'this' rather than the event's target\r\n    // which can be different each time\r\n    $(this).children('.panelContent').slideDown('slow');\r\n  }, function(e) {\r\n    $(this).children('.panelContent').slideUp('slow');\r\n  });",
+  "html":
+    "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\r\n  \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\r\n<head>\r\n<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js\"></script>\r\n<title>Sandbox</title>\r\n<meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\r\n<style type=\"text/css\" media=\"screen\">\r\nbody { background-color: #000; font: 16px Helvetica, Arial; color: #fff; height: 100%; }\r\n.panel\r\n{\r\nposition: absolute;\r\nwidth: 300px;\r\nborder:solid 3px blue;\r\n}\r\n.panelTitle\r\n{\r\nbackground-color: #666;\r\ncolor: Yellow;\r\n}\r\n.panelContent\r\n{\r\nbackground-color: #eee;\r\ncolor: blue;\r\ndisplay:none;\r\n}\r\n\r\n</style>\r\n</head>\r\n<body>\r\n<div style=\"height: 500px\">\r\n  <div id=\"p1\" class=\"panel\">\r\n    <div class=\"panelTitle\">title title title title</div>\r\n    <div class=\"panelContent\">more<br />text<br />more<br />text<br />...........................</div>\r\n  </div>\r\n</div>  \r\n  <div id=\"dbg\"></div>\r\n<script type=\"text/javascript\">\r\n<!-- we run in the footer so no need to use onload -->\r\n%code%\r\n</script>\r\n</body>\r\n</html>",
+  "css": null,
+  "created": "2008-10-13T12:20:58.000Z",
+  "settings": null
+}
