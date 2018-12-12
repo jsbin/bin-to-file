@@ -1,6 +1,6 @@
 {
   "name": "bin-to-file",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Converts JS Bin object to static HTML",
   "main": "dist/index.js",
   "babel": {
@@ -48,6 +48,7 @@
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-react": "^7.5.1",
+    "file-to-bin": "^1.0.0",
     "jest": "^22.1.4",
     "w3cjs": "~0.1.25"
   },
